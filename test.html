@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+    <title>导入 .3ds 格式模型</title>
+    <!-- <script src="three.js-master\build\three.min.js"></script> -->
+    <!-- <script src="three.js-master\examples\jsm\loaders\TDSLoader.js"></script> -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module">
+        //import * as THREE from "three";
+      //import { TDSLoader } from 'three/examples/jsm/loaders/TDSLoader.js';
+    </script>
+    
+</head>
+
+<body>
+    <script src="main.js" type="module">
+    </script>
+    <!-- <script type="module">
+        import * as THREE from "three";
+        import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+        import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+
+        // Instantiate a loader
+        const loader = new GLTFLoader();
+
+        // Optional: Provide a DRACOLoader instance to decode compressed mesh data
+        const dracoLoader = new DRACOLoader();
+        dracoLoader.setDecoderPath('three/examples/jsm/libs/draco/');
+        loader.setDRACOLoader(dracoLoader);
+
+        const scene = new THREE.Scene();
+        // Load a glTF resource
+        loader.load(
+            // resource URL
+            "Rigged_UFO_gltf/Rigged_Modular UFO 2.8.glb.gltf",
+            // called when the resource is loaded
+            function (gltf) {
+
+                scene.add(gltf.scene);
+
+                gltf.animations; // Array<THREE.AnimationClip>
+                gltf.scene; // THREE.Group
+                gltf.scenes; // Array<THREE.Group>
+                gltf.cameras; // Array<THREE.Camera>
+                gltf.asset; // Object
+            },
+            // called while loading is progressing
+            function (xhr) {
+                console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+            },
+            // called when loading has errors
+            function (error) {
+                console.log("An error happened");
+            }
+        );
+    </script> -->
+</body>
+
+</html>
